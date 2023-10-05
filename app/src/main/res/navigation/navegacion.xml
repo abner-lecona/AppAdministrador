@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion"
+    app:startDestination="@id/principalFrag">
+
+    <fragment
+        android:id="@+id/principalFrag"
+        android:name="mx.rmr.appadmin.view.PrincipalFrag"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principalFrag_to_registrarFrag"
+            app:destination="@id/registrarFrag" />
+        <action
+            android:id="@+id/action_principalFrag_to_mapaFragment"
+            app:destination="@id/mapaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrarFrag"
+        android:name="mx.rmr.appadmin.view.RegistrarFrag"
+        android:label="fragment_registrar"
+        tools:layout="@layout/fragment_registrar" />
+    <fragment
+        android:id="@+id/mapaFragment"
+        android:name="mx.rmr.appadmin.view.MapaFragment"
+        android:label="fragment_mapa"
+        tools:layout="@layout/fragment_mapa" />
+</navigation>
