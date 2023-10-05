@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "mx.rmr.appadmin"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "mx.rmr.appadmin"
@@ -33,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    // View Binding
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -47,6 +51,11 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     testImplementation("junit:junit:4.13.2")
+    //Maps
+    implementation("com.google.android.gms:play-services-maps:18.1.0")
+
+    //Fragmentos
+    implementation ("androidx.fragment:fragment-ktx:1.6.1")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }

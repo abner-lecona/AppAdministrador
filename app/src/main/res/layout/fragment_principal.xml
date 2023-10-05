@@ -10,7 +10,9 @@
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,16 +20,16 @@
 
         <ImageView
             android:id="@+id/imgDIF"
-            android:layout_width="50dp"
-            android:layout_height="150dp"
+            android:layout_width="40dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/diflogo" />
+            app:srcCompat="@drawable/logodif" />
 
         <ImageView
             android:id="@+id/imgNutriRed"
-            android:layout_width="50dp"
-            android:layout_height="150dp"
+            android:layout_width="40dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/nutrired" />
@@ -38,7 +40,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:hint="CURP / NUMERO DE USUARIO"
+        android:hint="Usuario / No. Comedor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -49,29 +51,35 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:inputType="textPassword"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:password="true" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnEntrar"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#070707"
         android:text="Entrar"
         android:textColorLink="#ECE6E6"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"

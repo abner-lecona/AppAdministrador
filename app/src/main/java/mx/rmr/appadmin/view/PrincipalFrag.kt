@@ -6,28 +6,44 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import mx.rmr.appadmin.R
+import mx.rmr.appadmin.databinding.FragmentPrincipalBinding
 import mx.rmr.appadmin.viewmodel.PrincipalVM
 
 class PrincipalFrag : Fragment() {
-
-    companion object {
-        fun newInstance() = PrincipalFrag()
-    }
-
+    lateinit var binding: FragmentPrincipalBinding
     private lateinit var viewModel: PrincipalVM
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_principal, container, false)
+        binding = FragmentPrincipalBinding.inflate(layoutInflater)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(PrincipalVM::class.java)
-        // TODO: Use the ViewModel
+    // Crea la vista e inicializa los Eventos y Observables
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        registrarEventos()
+        //registrarObservables()
+    }
+
+    private fun registrarEventos() {
+        // Evento de cuando el usuario da clic en el botón del mapa
+        binding.imgMapa.setOnClickListener {
+            // Crear un Intent para iniciar la actividad de destino
+//            val intent = Intent(requireContext(), MapaActivity::class.java)
+//            startActivity(intent)
+            findNavController().navigate(R.id.action_principalFrag_to_mapaFragment)
+        }
+
+        // Evento de cuando clickean "REISTRATE AQUI"
+        binding.btnEntrar.setOnClickListener {
+            // Navegar entre fragments
+            findNavController().navigate(R.id.action_principalFrag_to_registrarFrag)
+        }
     }
 
 }
