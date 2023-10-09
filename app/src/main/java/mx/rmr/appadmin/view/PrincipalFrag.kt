@@ -1,6 +1,5 @@
 package mx.rmr.appadmin.view
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,11 +8,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import mx.rmr.appadmin.R
 import mx.rmr.appadmin.databinding.FragmentPrincipalBinding
-import mx.rmr.appadmin.viewmodel.PrincipalVM
+
 
 class PrincipalFrag : Fragment() {
-    lateinit var binding: FragmentPrincipalBinding
-    private lateinit var viewModel: PrincipalVM
+    private lateinit var binding: FragmentPrincipalBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

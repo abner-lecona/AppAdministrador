@@ -6,20 +6,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import mx.rmr.appadmin.R
-import mx.rmr.appadmin.databinding.FragmentRegistrarBinding
-import mx.rmr.appadmin.viewmodel.RegistrarVM
+import mx.rmr.appadmin.databinding.FragmentRegistrarAsistenciaBinding
+import mx.rmr.appadmin.viewmodel.RegistrarAsistenciaVM
 
-class RegistrarFrag : Fragment() {
+class RegistrarAsistenciaFragment : Fragment() {
 
-    private lateinit var binding: FragmentRegistrarBinding
+    private lateinit var binding: FragmentRegistrarAsistenciaBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentRegistrarBinding.inflate(layoutInflater)
+        binding = FragmentRegistrarAsistenciaBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -30,13 +29,7 @@ class RegistrarFrag : Fragment() {
     }
 
     private fun registrarEventos() {
-        binding.btnRegUsuario.setOnClickListener{
-            findNavController().navigate(R.id.action_registrarFrag_to_registrarUsuarioFragment2)
-        }
-
-        binding.btnRegAsistencia.setOnClickListener{
-            findNavController().navigate(R.id.action_registrarFrag_to_registrarAsistenciaFragment)
-        }
+        // TO DO
     }
 
 }

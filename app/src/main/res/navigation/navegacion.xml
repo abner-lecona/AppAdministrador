@@ -21,10 +21,27 @@
         android:id="@+id/registrarFrag"
         android:name="mx.rmr.appadmin.view.RegistrarFrag"
         android:label="fragment_registrar"
-        tools:layout="@layout/fragment_registrar" />
+        tools:layout="@layout/fragment_registrar" >
+        <action
+            android:id="@+id/action_registrarFrag_to_registrarAsistenciaFragment"
+            app:destination="@id/registrarAsistenciaFragment" />
+        <action
+            android:id="@+id/action_registrarFrag_to_registrarUsuarioFragment2"
+            app:destination="@id/registrarUsuarioFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/mapaFragment"
         android:name="mx.rmr.appadmin.view.MapaFragment"
         android:label="fragment_mapa"
         tools:layout="@layout/fragment_mapa" />
+    <fragment
+        android:id="@+id/registrarAsistenciaFragment"
+        android:name="mx.rmr.appadmin.view.RegistrarAsistenciaFragment"
+        android:label="fragment_registrar_asistencia"
+        tools:layout="@layout/fragment_registrar_asistencia" />
+    <fragment
+        android:id="@+id/registrarUsuarioFragment2"
+        android:name="mx.rmr.appadmin.view.RegistrarUsuarioFragment"
+        android:label="fragment_registrar_usuario"
+        tools:layout="@layout/fragment_registrar_usuario" />
 </navigation>
